@@ -32,7 +32,7 @@ class LoginActivity : AppCompatActivity() {
             else
             {
                 auth.signInWithEmailAndPassword(email.text.toString(),password.text.toString()).addOnCompleteListener{task ->
-                    button.isEnabled = false
+                    button.isEnabled = true
                     if(task.isSuccessful){
                         Toast.makeText(this, "login successful", Toast.LENGTH_SHORT).show()
                         gotoPostActivity()
